@@ -1,6 +1,11 @@
-def fibonacci2(n:int):
-    a,b = 0, 1
-    while a < n:
-        print(a, end="")
-        a,b = b, a + b
-    print()
+def fibonacci(n):
+    nums_list = []
+    if n < 0:
+        ValueError("Input 0 or greater only!")
+    if n <= 1:
+        return n
+    for num in range(1, n):
+        fibnum = (num - 1) + num
+        nums_list.append(fibnum)
+        nums_list.append(num)
+    return len(nums_list)
